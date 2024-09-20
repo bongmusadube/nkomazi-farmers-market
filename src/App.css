@@ -53,7 +53,7 @@ header h1 {
 }
 
 .hero {
-  background-image: url('../public/images/nkomazi-hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/images/nkomazi-hero.jpg');
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -65,10 +65,10 @@ header h1 {
 }
 
 .hero-content {
-  background-color: rgba(0,0,0,0.6);
   padding: 40px;
   border-radius: 10px;
   max-width: 600px;
+  
 }
 
 .hero h2 {
