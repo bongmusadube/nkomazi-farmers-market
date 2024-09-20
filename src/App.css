@@ -1,168 +1,207 @@
-/* Global Styles */
+/* App.css */
+
+:root {
+  --primary-color: #2c5e1a;
+  --secondary-color: #f0f7e6;
+  --text-color: #333;
+  --accent-color: #ff9800;
+  --light-text: #ffffff;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
 }
 
 .App {
   text-align: center;
 }
 
-/* Header Styles */
 header {
-  background-color: #2b5819;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--light-text);
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .logo {
-  max-width: 100px;
-  margin-bottom: 10px;
+  max-width: 150px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(255, 152, 0, 0.5);
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* Hero Section */
+.tagline {
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 1.2em;
+  color: var(--accent-color);
+}
+
 .hero {
-  /*background-image: url('/images/hero-image.jpg'); */
+  background-image: url('../public/images/nkomazi-hero.jpg');
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--light-text);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content {
-  background-color: rgba(0,0,0,0.5);
-  padding: 20px;
+  background-color: rgba(0,0,0,0.6);
+  padding: 40px;
   border-radius: 10px;
+  max-width: 600px;
 }
 
 .hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* About Us Section */
-.about-us {
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+section {
+  padding: 80px 20px;
 }
 
-.about-image {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 10px;
+h2 {
+  font-size: 2.8em;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.team-members {
+.highlight-container, .event-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.team-member {
+.highlight-card, .event-card {
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 30px;
   margin: 20px;
-  max-width: 200px;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+.highlight-card:hover, .event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* Market Highlights Section */
-.market-highlights {
-  padding: 40px 20px;
-}
-
-.highlight-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Upcoming Events Section */
-.upcoming-events {
-  padding: 40px 20px;
-  background-color: #f5f5f5;
-}
-
-.event-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.highlight-card h3, .event-card h3 {
+  color: var(--primary-color);
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .date {
   font-weight: bold;
-  color: #2b5819;
+  color: var(--accent-color);
+  font-size: 1.2em;
 }
 
-/* Call to Action Section */
 .call-to-action {
-  background-color: #2b5819;
-  color: white;
-  padding: 40px 20px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 80px 20px;
 }
 
 .call-to-action button {
-  background-color: #fff;
-  color: #2b5819;
+  background-color: var(--accent-color);
+  color: var(--light-text);
   border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.4em;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .call-to-action button:hover {
-  background-color: #f0f0f0;
+  background-color: #e68a00;
+  transform: scale(1.05);
 }
 
-/* Event Images Section */
-.event-images {
-  padding: 40px 20px;
+.welovenkfm {
+  background-color: var(--secondary-color);
 }
 
 .image-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .image-gallery img {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
-  margin: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Contact Us Section */
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.event-highlights {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.event-highlights ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-highlights li {
+  background-color: var(--secondary-color);
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-highlights li:hover {
+  transform: translateY(-5px);
+}
+
 .contact-us {
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+  background-color: var(--secondary-color);
 }
 
 form {
@@ -173,57 +212,69 @@ form {
 
 form input, form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: 1em;
 }
 
 form button {
-  background-color: #2b5819;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--light-text);
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1.2em;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 form button:hover {
-  background-color: #1e3f11;
+  background-color: #214816;
+  transform: scale(1.05);
 }
 
-/* Footer Styles */
 footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 40px;
   text-align: center;
 }
 
+.footer-links {
+  margin-top: 20px;
+}
+
 footer a {
-  color: white;
-  margin: 0 10px;
+  color: var(--light-text);
+  margin: 0 15px;
   text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: var(--accent-color);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    height: 300px;
+    height: 400px;
   }
 
   .hero h2 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
-  .image-gallery img {
+  .highlight-card, .event-card {
     width: 100%;
-    height: auto;
+    margin: 20px 0;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
